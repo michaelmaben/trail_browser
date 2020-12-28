@@ -13,6 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>california-tours</name>
 	<description>Demo project for browsing california trails</description>
+	<packaging>jar</packaging>
 
 	<properties>
 		<java.version>15</java.version>
@@ -62,6 +63,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<configuration>
+							<mainClass>com.jeevanmaben.springboot.trails.CaliforniaToursApplication</mainClass>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>

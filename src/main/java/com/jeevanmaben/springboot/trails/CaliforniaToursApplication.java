@@ -24,8 +24,8 @@ public class CaliforniaToursApplication implements CommandLineRunner {
 	private TourPackageService tourPackageService;
 	@Autowired
 	private TourService tourService;
-	@Value("#{trails.importfile}")
-	private String importJSONFile;
+//	@Value("#{importfile}")
+	private String importJSONFile = "ExploreCalifornia.json";
 
 	public static void main(String[] args) {
 		SpringApplication.run(CaliforniaToursApplication.class, args);
@@ -33,7 +33,7 @@ public class CaliforniaToursApplication implements CommandLineRunner {
 
 	public void run(String... args){
 		createTourPackages();
-		createTours(importJSONFile);
+//		createTours(importJSONFile);
 	}
 
 	private void createTourPackages(){
